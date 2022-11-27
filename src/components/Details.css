@@ -1,0 +1,16 @@
+.infodetails{
+    font-size: 22px;
+    font-weight: 300;
+    color: #2980b9;
+}
+
+.iconsDetails{
+    margin-left: 53%;
+}
+
+.iconsDetails i{
+    font-size: 18px;
+    margin-right: 25px;
+    color: #2980b9;
+    cursor:pointer;
+}

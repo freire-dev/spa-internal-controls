@@ -1,0 +1,36 @@
+.form-login{
+    background-color: rgba(0,0,0,0.3);
+    padding: 70px 100px;
+    margin: 8% 20%;
+    border-radius: 20px;
+}
+
+.form-label{
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.form-login p{
+    color: #fff;
+}
+
+.btn-submit-true{
+    background: #2980b9;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 900;
+}
+
+.btn-submit-false{
+    background: #646464;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 900;
+}

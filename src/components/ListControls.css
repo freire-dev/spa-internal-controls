@@ -1,0 +1,107 @@
+html{
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.5);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #2980b9;
+    border-radius: 20px;
+    border: 3px solid rgba(0,0,0,0.5);  
+  }
+
+.navbar{
+    background: rgba(0,0,0,0.4);
+    position:fixed;
+    width: 100%;
+    height: auto;
+}
+
+.btn-addcontrol{
+    margin-left: 8%;
+    padding: 0.3% 1%;
+    font-size: 17px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-addcontrol:hover{
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+
+.btn-addcontrol:focus{
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+.btn-addcontrol i{
+    color: #2980b9;
+}
+
+.modal-addcontrol{
+    background-color: rgba(0,0,0,0.4);
+}
+
+.card-list{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    padding: 5%;
+    justify-content: space-around;
+}
+
+
+.card-control{
+    margin-top: 3%;
+    padding: 4% 90px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    
+}
+
+.card-control li{
+    list-style: none;
+    text-align: center;
+    color: #fff;
+}
+
+.card-control li p{
+    white-space: nowrap;
+    text-overflow: ellipsis;   
+}
+
+.btn-details-control{
+    padding: 10px 25px;
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.p-3{
+    margin-left: 70%;
+    margin-top: 83%;
+}
+
+.toast{
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+.toast-header{
+    background-color: #2980b9;
+    color: #fff;
+}
