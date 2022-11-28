@@ -65,7 +65,7 @@ body::-webkit-scrollbar {
 
 
 .card-control{
-    margin-top: 3%;
+    margin-top: 5%;
     padding: 4% 90px;
     background: rgba(0,0,0,0.4);
     border-radius: 20px;
@@ -93,7 +93,7 @@ body::-webkit-scrollbar {
 
 .p-3{
     margin-left: 70%;
-    margin-top: 83%;
+    margin-top: 80%;
 }
 
 .toast{
@@ -104,4 +104,32 @@ body::-webkit-scrollbar {
 .toast-header{
     background-color: #2980b9;
     color: #fff;
+}
+
+.search-form-div{
+    margin-right: 10%;
+    display: flex;
+}
+
+.search-form .input-sf{
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    border: 1px solid #fff;
+    margin-top: 8%;
+    border-radius: 0px;
+}
+
+.btn-search-form{
+    margin-top: 45.5%;
+    margin-left: -3%;
+    background: rgba(0,0,0,0.5);
+    color: #2980b9;
+    border: 1px solid #fff;
+    border-radius: 0px;
+}
+
+.btn-search-form:hover{
+    background: rgba(0,0,0,0.5);
+    color: #2980b9;
+    border: 1px solid #fff;
 }

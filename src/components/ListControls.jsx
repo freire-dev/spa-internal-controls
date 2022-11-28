@@ -20,7 +20,7 @@ const ListControls = () => {
     const handleShow = () => setShow(true);
 
     const [showToast, setShowToast] = useState(false);
-    const[messageToast, setMessageToast] = useState()
+    const [messageToast, setMessageToast] = useState()
     const position = useState('bottom-end');
 
     //pegando um estado do componente filho para o pai. (de Details para ListControl)
@@ -28,8 +28,9 @@ const ListControls = () => {
         setControls(updateListDel)
     }
 
+
     const toastMsgAdd = () => {
-        setMessageToast(`Controle ${code} adicionado com sucesso.`)
+        setMessageToast(`Controle ${code.toUpperCase()} adicionado com sucesso.`)
         setShowToast(true)
         setTimeout(function () { setShowToast(false) }, 5000)
     }
@@ -51,8 +52,16 @@ const ListControls = () => {
         fetchData()
     }, [])
 
+    //Barra de busca
+
+    const [query, setQuery] = useState()
+
+    const controlsFilter = typeof query === 'undefined' ?
+         controls :
+         controls.filter((control) => control.code.includes(query.toUpperCase()))
+
     //get de dados do forms
-    const [code, setCode] = useState('CTECH.40')
+    const [code, setCode] = useState()
     const [name, setName] = useState()
     const [description, setDescription] = useState()
     const [goal, setGoal] = useState()
@@ -66,7 +75,7 @@ const ListControls = () => {
         e.preventDefault()
 
         const newControl = {
-            code,
+            code: code.toUpperCase(),
             name,
             description,
             goal,
@@ -87,6 +96,14 @@ const ListControls = () => {
         handleClose();
         setControls((prevControl) => [...prevControl, newControl]);
         toastMsgAdd();
+        setCode('')
+        setName('')
+        setDescription('')
+        setGoal('')
+        setFrequency('')
+        setRisk('')
+        setControlOwner('')
+        setEffective('')
     }
 
     return (
@@ -172,7 +189,7 @@ const ListControls = () => {
                         <Button variant="secondary" onClick={handleClose}>
                             Fechar
                         </Button>
-                        <Button variant="primary" onClick={postData}>
+                        <Button variant="success" onClick={postData}>
                             Adicionar
                         </Button>
                     </Modal.Footer>
@@ -190,11 +207,31 @@ const ListControls = () => {
                         </Toast>
                     </ToastContainer>
                 }
+                <div className='search-form-div'>
+                    <div className='search-form'>
+                        <Form onSubmit={(e) => e.preventDefault()}>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput9">
+                                <Form.Control
+                                    onChange={(e) => setQuery(e.target.value)}
+                                    value={query}
+                                    type="text"
+                                    placeholder="Pesquise o controle aqui..."
+                                    className='input-sf'
+                                />
+                            </Form.Group>
+                        </Form>
+                    </div>
+                    <div className='btn-search-form-div'>
+                        <Button className='btn-search-form' variant="primary" type='submit'>
+                            <i class="bi bi-search"></i>
+                        </Button>
+                    </div>
+                </div>
             </div>
             <div>
                 <ul className='card-list'>
                     {loading && <Loading />}
-                    {controls.map((control) => (
+                    {controlsFilter.map((control) => (
                         <div className='card-control'>
                             <li key={control.code}>
                                 <h1>{control.code}</h1>

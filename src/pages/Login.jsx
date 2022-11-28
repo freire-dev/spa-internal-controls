@@ -9,8 +9,8 @@ const Login = () => {
   const[password, setPassword] = useState()
 
   useEffect(() => {
-    if(login === 'luan.freire'){
-      if(password === 'luan123'){
+    if(login === 'admin'){
+      if(password === 'admin'){
         setStatus(true)
       }else{
         setStatus(false)
@@ -29,7 +29,6 @@ const Login = () => {
           <label className="form-label">Senha</label>
           <input onChange={(e) => setPassword(e.target.value)}type="password" className="form-control" placeholder="Digite aqui..."/>
       </div>
-      <p>Não possui conta? Registra-se <Link to={"/registro"}>aqui</Link></p>
       {status === true ? <Link to={"/workarea"}><button className="btn-submit-true">Entrar</button></Link> : <button className="btn-submit-false" disabled>Entrar</button>}
     </form>
     </div>
