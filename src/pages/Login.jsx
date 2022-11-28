@@ -22,7 +22,7 @@ const Login = () => {
     <div className="form-login">
     <form>
       <div className="mb-3">
-          <label className="form-label">Username</label>
+          <label className="form-label">Usuário</label>
           <input onChange={(e) => setLogin(e.target.value)} type="text" className="form-control" placeholder="Digite aqui..."/>
       </div>
       <div className="mb-3">
