@@ -187,7 +187,7 @@ const Details = ({
                     <Modal.Title>Editando o controle</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form>
+                    <Form autocomplete="off">
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <h6>Código do controle</h6>
                             <Form.Control

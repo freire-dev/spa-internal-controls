@@ -117,7 +117,7 @@ const ListControls = () => {
                         <Modal.Title>Adicionando o controle</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <Form>
+                        <Form autocomplete="off">
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <h6>Código do controle</h6>
                                 <Form.Control
@@ -209,7 +209,7 @@ const ListControls = () => {
                 }
                 <div className='search-form-div'>
                     <div className='search-form'>
-                        <Form onSubmit={(e) => e.preventDefault()}>
+                        <Form onSubmit={(e) => e.preventDefault()} autocomplete="off" >
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput9">
                                 <Form.Control
                                     onChange={(e) => setQuery(e.target.value)}
